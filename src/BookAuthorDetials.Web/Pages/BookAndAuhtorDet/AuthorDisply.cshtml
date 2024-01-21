@@ -1,0 +1,19 @@
+﻿ @page
+ 
+@using BookAuthorDetials.Localization
+@using BookAuthorDetials.Web.Pages.BookAndAuhtorDet
+@using Microsoft.Extensions.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@model AuthorDisplyModel
+@inject IStringLocalizer<BookAuthorDetialsResource> L
+@{
+    Layout = null;
+}
+
+<form method="post">
+    <abp-input asp-for="authorDto.AuthorName" />
+    <abp-select asp-for="@Model.authorDto.NationalityId" />
+    <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+</form>
+
+ 
